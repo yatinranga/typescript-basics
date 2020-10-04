@@ -1,13 +1,17 @@
 class Parent {
     greet() {
-        console.log("Hi There..!");
+        console.log("Hi from parent class..!");
 
     }
 }
 
 class Child extends Parent {
+    greet() {
+        console.log("Hi from child class..!");
 
+    }
 }
 
 var a = new Child();
-console.log(a.greet());
+a.greet();
+

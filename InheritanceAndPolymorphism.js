@@ -15,7 +15,7 @@ var Parent = /** @class */ (function () {
     function Parent() {
     }
     Parent.prototype.greet = function () {
-        console.log("Hi There..!");
+        console.log("Hi from parent class..!");
     };
     return Parent;
 }());
@@ -24,7 +24,10 @@ var Child = /** @class */ (function (_super) {
     function Child() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Child.prototype.greet = function () {
+        console.log("Hi from child class..!");
+    };
     return Child;
 }(Parent));
 var a = new Child();
-console.log(a.greet());
+a.greet();
