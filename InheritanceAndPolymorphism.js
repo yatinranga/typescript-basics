@@ -27,7 +27,14 @@ var Child = /** @class */ (function (_super) {
     Child.prototype.greet = function () {
         console.log("Hi from child class..!");
     };
+    Child.prototype.greetUsingThisGreet = function () {
+        this.greet();
+    };
+    Child.prototype.greetUsingSuperGreet = function () {
+        _super.prototype.greet.call(this);
+    };
     return Child;
 }(Parent));
 var a = new Child();
-a.greet();
+a.greetUsingThisGreet();
+a.greetUsingSuperGreet();

@@ -8,10 +8,19 @@ class Parent {
 class Child extends Parent {
     greet() {
         console.log("Hi from child class..!");
+    }
 
+    greetUsingThisGreet() {
+        this.greet();
+    }
+
+
+    greetUsingSuperGreet() {
+        super.greet();
     }
 }
 
 var a = new Child();
-a.greet();
+a.greetUsingThisGreet();
+a.greetUsingSuperGreet();
 
