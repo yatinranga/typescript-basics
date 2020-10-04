@@ -20,7 +20,10 @@ class Child extends Parent {
     }
 }
 
-var a = new Child();
-a.greetUsingThisGreet();
-a.greetUsingSuperGreet();
+// var a = new Child();
+// a.greetUsingThisGreet();
+// a.greetUsingSuperGreet();
+
+var a: Parent = new Child();
+a.greet();
 

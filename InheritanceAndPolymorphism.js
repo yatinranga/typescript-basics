@@ -35,6 +35,8 @@ var Child = /** @class */ (function (_super) {
     };
     return Child;
 }(Parent));
+// var a = new Child();
+// a.greetUsingThisGreet();
+// a.greetUsingSuperGreet();
 var a = new Child();
-a.greetUsingThisGreet();
-a.greetUsingSuperGreet();
+a.greet();
